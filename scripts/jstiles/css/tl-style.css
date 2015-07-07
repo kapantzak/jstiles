@@ -107,6 +107,26 @@
 /* Fade */
 .tl-tile.tl-fade { opacity:0 }
 .tl-tile.tl-fade-in { opacity:1 }
+/* Slide up */
+.tl-tile.tl-slide-up { 
+	position:relative;
+	opacity:0;
+	top:100px;
+}
+.tl-tile.tl-slide-up-f { 
+	opacity:1;
+	top:0;
+}
+/* Slide down */
+.tl-tile.tl-slide-down { 
+	position:relative;
+	opacity:0;
+	top:-100px;
+}
+.tl-tile.tl-slide-down-f { 
+	opacity:1;
+	top:0;
+}
 
 .tl-bottom {
 	/* position:absolute;

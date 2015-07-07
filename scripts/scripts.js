@@ -256,6 +256,100 @@ $(document).ready(function() {
 	$('#load_live_8').on('click', function() {
 		$('#live8').jstiles(opt8);
 	});
+	
+	// #9
+	var temp9 = {
+		myTemplate: {
+			tilesNum: 8,
+			rows: {
+				0: {
+					rowClass: 'tl-row col-xs-12',
+					start: '4',
+					end: '7'
+				}
+			},
+			columns: {
+				0: {
+					colClass: 'tl-col col-xs-12 col-md-9',
+					start: '0',
+					end: '2'
+				}
+			},
+			tiles: {
+				0: 'col-xs-12 col-md-7',
+				1: 'col-xs-12 col-md-2',
+				2: 'col-xs-12 col-md-5',
+				3: 'col-xs-12 col-md-3',
+				4: 'col-xs-12 col-md-3',
+				5: 'col-xs-12 col-md-3',
+				6: 'col-xs-12 col-md-3',
+				7: 'col-xs-12 col-md-3'
+			},
+			animations: {
+				0: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:150 },
+				1: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:50 },
+				2: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:150 },
+				3: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:150 },
+				4: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:250 },
+				5: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:550 },
+				6: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:150 },
+				7: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:350 }
+			}
+		}
+	};
+	var opt9 = {
+		templateObj: temp9
+	};	
+	$('#load_live_9').on('click', function() {
+		$('#live9').jstiles(opt9);
+	});
+	
+	// #10
+	var temp10 = {
+		myTemplate: {
+			tilesNum: 8,
+			rows: {
+				0: {
+					rowClass: 'tl-row col-xs-12',
+					start: '4',
+					end: '7'
+				}
+			},
+			columns: {
+				0: {
+					colClass: 'tl-col col-xs-12 col-md-9',
+					start: '0',
+					end: '2'
+				}
+			},
+			tiles: {
+				0: 'col-xs-12 col-md-7',
+				1: 'col-xs-12 col-md-2',
+				2: 'col-xs-12 col-md-5',
+				3: 'col-xs-12 col-md-3',
+				4: 'col-xs-12 col-md-3',
+				5: 'col-xs-12 col-md-3',
+				6: 'col-xs-12 col-md-3',
+				7: 'col-xs-12 col-md-3'
+			},
+			animations: {
+				0: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:150 },
+				1: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:50 },
+				2: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:150 },
+				3: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:150 },
+				4: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:250 },
+				5: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:550 },
+				6: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:150 },
+				7: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:350 }
+			}
+		}
+	};
+	var opt10 = {
+		templateObj: temp10
+	};	
+	$('#load_live_10').on('click', function() {
+		$('#live10').jstiles(opt10);
+	});
 });
 $('#destroy').on('click', function() {
 	$('#tiles-container').jstiles('destroy');

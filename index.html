@@ -601,27 +601,27 @@
 				<li>tlClassF [string]: The class that the specific tile will get and trigger the css animation.</li>
 				<li>tlDelay [number]: The time in milliseconds that the animation will wait until it starts getting executed.</li>
 			</ul>
-			<p>At the moment, there are only two animations ready to be used (<strong>tl-scale</strong> and <strong>tl-fade</strong>) but more are coming! You can create your self your own animation type by adding a new set of css rules that will perform a different animation!</p>
+			<p>At the moment, there are four animations ready to be used but more are coming! You can create your self your own animation type by adding a new set of css rules that will perform a different animation!</p>
+			<p>These are the available animation types:</p>
+			<ul>
+				<li>tl-scale</li>
+				<li>tl-fade</li>
+				<li>tl-slide-up</li>
+				<li>tl-slide-down</li>
+			</ul>
+			<div class="alert alert-info" role="alert">Click the buttons to initialize the plugin</div>
+			
+			<h3 class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-scale</h3>
 			
 			<div class="codeBlock">
 				<span class="codeHeader">Animations object (tl-scale)</span>
 				<code>
 					animations: {<br />
 					&nbsp;0: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },<br />
-					&nbsp;1: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:50 },<br />
-					&nbsp;2: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },<br />
-					&nbsp;3: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:250 },<br />
-					&nbsp;4: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:550 },<br />
-					&nbsp;5: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:100 },<br />
-					&nbsp;6: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:400 },<br />
-					&nbsp;7: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:350 },<br />
+					&nbsp;<i>//...</i><br />
 					}<br />
 				</code>
 			</div>
-			
-			<p>Check the following example</p>
-			
-			<div class="alert alert-info" role="alert">Click the buttons to initialize the plugin</div>
 			
 			<div class="live-example marginTop-lg">
 				<div class="live-header col-xs-12">
@@ -641,14 +641,14 @@
 				</div>
 			</div>
 			
-			<p class="marginTop-lg">Check out the <strong>tl-fade</strong> animation also</p>
-			
+			<h3 class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-fade</h3>
+						
 			<div class="codeBlock">
-				<span class="codeHeader">Animations object (tl-scale)</span>
+				<span class="codeHeader">Animations object (tl-fade)</span>
 				<code>
 					animations: {<br />
 					&nbsp;0: { tlClass:'tl-fade', tlClassF:'tl-fade-in', tlDelay:150 },<br />
-					&nbsp;<i>//...</i>
+					&nbsp;<i>//...</i><br />
 					}<br />
 				</code>
 			</div>
@@ -658,6 +658,66 @@
 					Example#4.2 - Animations (tl-fade) <button id="load_live_8" type="button" class="btn btn-default load_live">Initialize plugin</button>
 				</div>
 				<div id="live8" class="live-tiles col-xs-12">
+					<div class="tl-page" data-tl-template="myTemplate">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			
+			<h3 class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-slide-up</h3>
+						
+			<div class="codeBlock">
+				<span class="codeHeader">Animations object (tl-slide-up)</span>
+				<code>
+					animations: {<br />
+					&nbsp;0: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:150 },<br />
+					&nbsp;<i>//...</i><br />
+					}<br />
+				</code>
+			</div>
+			
+			<div class="live-example marginTop-lg">
+				<div class="live-header col-xs-12">
+					Example#4.3 - Animations (tl-slide-up) <button id="load_live_9" type="button" class="btn btn-default load_live">Initialize plugin</button>
+				</div>
+				<div id="live9" class="live-tiles col-xs-12">
+					<div class="tl-page" data-tl-template="myTemplate">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			
+			<h3 class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-slide-down</h3>
+						
+			<div class="codeBlock">
+				<span class="codeHeader">Animations object (tl-slide-down)</span>
+				<code>
+					animations: {<br />
+					&nbsp;0: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:150 },<br />
+					&nbsp;<i>//...</i><br />
+					}<br />
+				</code>
+			</div>
+			
+			<div class="live-example marginTop-lg">
+				<div class="live-header col-xs-12">
+					Example#4.4 - Animations (tl-slide-down) <button id="load_live_10" type="button" class="btn btn-default load_live">Initialize plugin</button>
+				</div>
+				<div id="live10" class="live-tiles col-xs-12">
 					<div class="tl-page" data-tl-template="myTemplate">
 						<div></div>
 						<div></div>
