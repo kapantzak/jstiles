@@ -137,7 +137,7 @@
 						pageTiles.eq(tc).addClass(temp.tiles[tc]);
 					}
 					for (an in temp.animations) {
-						pageTiles.eq(an).addClass(temp.animations[tc].tlClass);
+						pageTiles.eq(an).addClass(temp.animations[an].tlClass);
 					}
 					//Set configurations
 					for (cn in temp.config) {						
