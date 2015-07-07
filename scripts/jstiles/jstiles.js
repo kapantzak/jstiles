@@ -380,50 +380,17 @@
 				8: 'col-xs-12 col-sm-6 col-md-5 col-lg-6',
 				9: 'col-xs-12 col-sm-6 col-md-3 col-lg-2'
 			},
-			// animations: {
-				// 0: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
-				// 1: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:50 },
-				// 2: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
-				// 3: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
-				// 4: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:250 },
-				// 5: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:550 },
-				// 6: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
-				// 7: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:350 },
-				// 8: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
-				// 9: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:50 },
-			// },
-			// animations: {
-				// 0: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:150 },
-				// 1: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:50 },
-				// 2: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:150 },
-				// 3: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:150 },
-				// 4: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:250 },
-				// 5: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:550 },
-				// 6: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:150 },
-				// 7: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:350 },
-				// 8: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:150 },
-				// 9: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:50 },
-			// },
 			animations: {
-				0: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:150 },
-				1: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:50 },
-				2: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:150 },
-				3: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:150 },
-				4: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:250 },
-				5: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:550 },
-				6: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:150 },
-				7: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:350 },
-				8: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:150 },
-				9: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:50 },
-			},
-			config: {
-				// 0: {
-					// //padding: '1',
-					// ratio: '0.7' 
-				// },
-				// 3: {
-					// ratio: '0.72' 
-				// }
+				0: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
+				1: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:50 },
+				2: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
+				3: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
+				4: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:250 },
+				5: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:550 },
+				6: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
+				7: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:350 },
+				8: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
+				9: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:50 },
 			}
 		},
 		tempB: {
