@@ -154,7 +154,9 @@ $(document).ready(function() {
 	var opt5 = {
 		templateObj: temp5
 	};
-	$('#live5').jstiles(opt5);
+	$('#load_live_5').on('click', function() {
+		$('#live5').jstiles(opt5);
+	});
 	
 	// #6
 	var temp6 = {
@@ -207,6 +209,53 @@ $(document).ready(function() {
 	};
 	$('#live6').jstiles(opt6);
 	$('#live7').jstiles(opt6);
+	
+	// #8
+	var temp8 = {
+		myTemplate: {
+			tilesNum: 8,
+			rows: {
+				0: {
+					rowClass: 'tl-row col-xs-12',
+					start: '4',
+					end: '7'
+				}
+			},
+			columns: {
+				0: {
+					colClass: 'tl-col col-xs-12 col-md-9',
+					start: '0',
+					end: '2'
+				}
+			},
+			tiles: {
+				0: 'col-xs-12 col-md-7',
+				1: 'col-xs-12 col-md-2',
+				2: 'col-xs-12 col-md-5',
+				3: 'col-xs-12 col-md-3',
+				4: 'col-xs-12 col-md-3',
+				5: 'col-xs-12 col-md-3',
+				6: 'col-xs-12 col-md-3',
+				7: 'col-xs-12 col-md-3'
+			},
+			animations: {
+				0: { tlClass:'tl-fade', tlClassF:'tl-fade-in', tlDelay:150 },
+				1: { tlClass:'tl-fade', tlClassF:'tl-fade-in', tlDelay:50 },
+				2: { tlClass:'tl-fade', tlClassF:'tl-fade-in', tlDelay:150 },
+				3: { tlClass:'tl-fade', tlClassF:'tl-fade-in', tlDelay:150 },
+				4: { tlClass:'tl-fade', tlClassF:'tl-fade-in', tlDelay:250 },
+				5: { tlClass:'tl-fade', tlClassF:'tl-fade-in', tlDelay:550 },
+				6: { tlClass:'tl-fade', tlClassF:'tl-fade-in', tlDelay:150 },
+				7: { tlClass:'tl-fade', tlClassF:'tl-fade-in', tlDelay:350 }
+			}
+		}
+	};
+	var opt8 = {
+		templateObj: temp8
+	};	
+	$('#load_live_8').on('click', function() {
+		$('#live8').jstiles(opt8);
+	});
 });
 $('#destroy').on('click', function() {
 	$('#tiles-container').jstiles('destroy');

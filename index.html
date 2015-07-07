@@ -601,10 +601,10 @@
 				<li>tlClassF [string]: The class that the specific tile will get and trigger the css animation.</li>
 				<li>tlDelay [number]: The time in milliseconds that the animation will wait until it starts getting executed.</li>
 			</ul>
-			<p>At the moment, there is only one animation ready to be used (tl-scale) but more are coming! You can create your self your own animation type by adding a new set of css rules that will perform a different animation!</p>
+			<p>At the moment, there are only two animations ready to be used (<strong>tl-scale</strong> and <strong>tl-fade</strong>) but more are coming! You can create your self your own animation type by adding a new set of css rules that will perform a different animation!</p>
 			
 			<div class="codeBlock">
-				<span class="codeHeader">Animations object</span>
+				<span class="codeHeader">Animations object (tl-scale)</span>
 				<code>
 					animations: {<br />
 					&nbsp;0: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },<br />
@@ -621,13 +621,43 @@
 			
 			<p>Check the following example</p>
 			
-			<div class="alert alert-info" role="alert">Refresh the page to check the animation</div>
+			<div class="alert alert-info" role="alert">Click the buttons to initialize the plugin</div>
 			
 			<div class="live-example marginTop-lg">
 				<div class="live-header col-xs-12">
-					Example#4 - Animations
+					Example#4.1 - Animations (tl-scale) <button id="load_live_5" type="button" class="btn btn-default load_live">Initialize plugin</button>
 				</div>
 				<div id="live5" class="live-tiles col-xs-12">
+					<div class="tl-page" data-tl-template="myTemplate">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			
+			<p class="marginTop-lg">Check out the <strong>tl-fade</strong> animation also</p>
+			
+			<div class="codeBlock">
+				<span class="codeHeader">Animations object (tl-scale)</span>
+				<code>
+					animations: {<br />
+					&nbsp;0: { tlClass:'tl-fade', tlClassF:'tl-fade-in', tlDelay:150 },<br />
+					&nbsp;<i>//...</i>
+					}<br />
+				</code>
+			</div>
+			
+			<div class="live-example marginTop-lg">
+				<div class="live-header col-xs-12">
+					Example#4.2 - Animations (tl-fade) <button id="load_live_8" type="button" class="btn btn-default load_live">Initialize plugin</button>
+				</div>
+				<div id="live8" class="live-tiles col-xs-12">
 					<div class="tl-page" data-tl-template="myTemplate">
 						<div></div>
 						<div></div>

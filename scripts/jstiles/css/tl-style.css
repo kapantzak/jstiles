@@ -100,8 +100,14 @@
 	padding:5px;
 	transition: all 250ms ease-out;
 }
+/* Animations ---------------------------- */
+/* Scale */
 .tl-tile.tl-scale { transform: scale(0) }
 .tl-tile.tl-scale-up { transform: scale(1) }
+/* Fade */
+.tl-tile.tl-fade { opacity:0 }
+.tl-tile.tl-fade-in { opacity:1 }
+
 .tl-bottom {
 	/* position:absolute;
 	bottom:0; */
