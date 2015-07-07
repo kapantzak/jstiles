@@ -188,7 +188,7 @@
 			$(document).on('click', '.tl-arrow-holder', function() {
 				var that = $(this);
 				if (pagesNum > 1) {
-					var slider = $el.find('.' + pagesHolderClass);
+					var slider = that.closest('.tl-tiles-container').find('.' + pagesHolderClass);
 					var curPage = parseInt(slider.attr('data-cur-page'));
 					if (!slider.hasClass('.tl-animating')) {
 						if (that.hasClass('tl-arrow-prev')) {
