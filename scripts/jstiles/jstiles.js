@@ -47,6 +47,13 @@
 				'selector': selector,
 				'orClass': orClass
 			});
+			//Store each tile original classes
+			$el.find('.tl-page').children().each(function() {
+				var that = $(this);
+				var cl = that.attr('class');
+				var orClass = (cl) ? cl : '';
+				that.attr('data-or-class', orClass);	
+			});
 			
 			if (loader > 0) {
 				$el.addClass('invisible');
@@ -278,13 +285,15 @@
 			var $el = this.$el;
 			var outer = $el.closest('.tl-outer');
 			var pagesHolderClass = 'tl-pagesHolder';
-			var $data = $.data($el, 'storedAttr');			
+			var $data = $.data($el, 'storedAttr');		
 			$el.removeData()
 				.attr('class', $data.orClass)
 				.find('.tl-tile').each(function() {
 					var that = $(this);
 					var orContent = that.find('.tl-tile-content').html();
-					that.html(orContent);
+					var dorCl = that.attr('data-or-class');
+					var orTileClass = (dorCl) ? dorCl : '';
+					that.removeAttr('data-animdelay data-animeclass data-or-class').attr('class', orTileClass).html(orContent);
 				});
 			$el.removeAttr('data-bts-class').find('.tl-page').each(function() {
 				$(this).removeAttr('data-page style');
