@@ -111,53 +111,6 @@ $(document).ready(function() {
 	};
 	$('#live4').jstiles(opt4);
 	
-	// #5
-	var temp5 = {
-		myTemplate: {
-			tilesNum: 8,
-			rows: {
-				0: {
-					rowClass: 'tl-row col-xs-12',
-					start: '4',
-					end: '7'
-				}
-			},
-			columns: {
-				0: {
-					colClass: 'tl-col col-xs-12 col-md-9',
-					start: '0',
-					end: '2'
-				}
-			},
-			tiles: {
-				0: 'col-xs-12 col-md-7',
-				1: 'col-xs-12 col-md-2',
-				2: 'col-xs-12 col-md-5',
-				3: 'col-xs-12 col-md-3',
-				4: 'col-xs-12 col-md-3',
-				5: 'col-xs-12 col-md-3',
-				6: 'col-xs-12 col-md-3',
-				7: 'col-xs-12 col-md-3'
-			},
-			animations: {
-				0: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
-				1: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:50 },
-				2: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
-				3: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:250 },
-				4: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:550 },
-				5: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:100 },
-				6: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:400 },
-				7: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:350 }	
-			}
-		}
-	};
-	var opt5 = {
-		templateObj: temp5
-	};
-	$('#load_live_5').on('click', function() {
-		$('#live5').jstiles(opt5);
-	});
-	
 	// #6
 	var temp6 = {
 		myTemplate: {
@@ -210,8 +163,49 @@ $(document).ready(function() {
 	$('#live6').jstiles(opt6);
 	$('#live7').jstiles(opt6);
 	
-	// #8
-	var temp8 = {
+});
+
+var animObj = {
+	5: {
+		myTemplate: {
+			tilesNum: 8,
+			rows: {
+				0: {
+					rowClass: 'tl-row col-xs-12',
+					start: '4',
+					end: '7'
+				}
+			},
+			columns: {
+				0: {
+					colClass: 'tl-col col-xs-12 col-md-9',
+					start: '0',
+					end: '2'
+				}
+			},
+			tiles: {
+				0: 'col-xs-12 col-md-7',
+				1: 'col-xs-12 col-md-2',
+				2: 'col-xs-12 col-md-5',
+				3: 'col-xs-12 col-md-3',
+				4: 'col-xs-12 col-md-3',
+				5: 'col-xs-12 col-md-3',
+				6: 'col-xs-12 col-md-3',
+				7: 'col-xs-12 col-md-3'
+			},
+			animations: {
+				0: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
+				1: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:50 },
+				2: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },
+				3: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:250 },
+				4: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:550 },
+				5: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:100 },
+				6: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:400 },
+				7: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:350 }	
+			}
+		}
+	},
+	8: {
 		myTemplate: {
 			tilesNum: 8,
 			rows: {
@@ -249,16 +243,8 @@ $(document).ready(function() {
 				7: { tlClass:'tl-fade', tlClassF:'tl-fade-in', tlDelay:350 }
 			}
 		}
-	};
-	var opt8 = {
-		templateObj: temp8
-	};	
-	$('#load_live_8').on('click', function() {
-		$('#live8').jstiles(opt8);
-	});
-	
-	// #9
-	var temp9 = {
+	},
+	9: {
 		myTemplate: {
 			tilesNum: 8,
 			rows: {
@@ -296,16 +282,8 @@ $(document).ready(function() {
 				7: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:350 }
 			}
 		}
-	};
-	var opt9 = {
-		templateObj: temp9
-	};	
-	$('#load_live_9').on('click', function() {
-		$('#live9').jstiles(opt9);
-	});
-	
-	// #10
-	var temp10 = {
+	},
+	10: {
 		myTemplate: {
 			tilesNum: 8,
 			rows: {
@@ -343,14 +321,97 @@ $(document).ready(function() {
 				7: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:350 }
 			}
 		}
+	},
+	11: {
+		myTemplate: {
+			tilesNum: 8,
+			rows: {
+				0: {
+					rowClass: 'tl-row col-xs-12',
+					start: '4',
+					end: '7'
+				}
+			},
+			columns: {
+				0: {
+					colClass: 'tl-col col-xs-12 col-md-9',
+					start: '0',
+					end: '2'
+				}
+			},
+			tiles: {
+				0: 'col-xs-12 col-md-7',
+				1: 'col-xs-12 col-md-2',
+				2: 'col-xs-12 col-md-5',
+				3: 'col-xs-12 col-md-3',
+				4: 'col-xs-12 col-md-3',
+				5: 'col-xs-12 col-md-3',
+				6: 'col-xs-12 col-md-3',
+				7: 'col-xs-12 col-md-3'
+			},
+			animations: {
+				0: { tlClass:'tl-slide-left', tlClassF:'tl-slide-left-in', tlDelay:150 },
+				1: { tlClass:'tl-slide-left', tlClassF:'tl-slide-left-in', tlDelay:50 },
+				2: { tlClass:'tl-slide-left', tlClassF:'tl-slide-left-in', tlDelay:150 },
+				3: { tlClass:'tl-slide-left', tlClassF:'tl-slide-left-in', tlDelay:150 },
+				4: { tlClass:'tl-slide-left', tlClassF:'tl-slide-left-in', tlDelay:250 },
+				5: { tlClass:'tl-slide-left', tlClassF:'tl-slide-left-in', tlDelay:550 },
+				6: { tlClass:'tl-slide-left', tlClassF:'tl-slide-left-in', tlDelay:150 },
+				7: { tlClass:'tl-slide-left', tlClassF:'tl-slide-left-in', tlDelay:350 }
+			}
+		}
+	},
+	12: {
+		myTemplate: {
+			tilesNum: 8,
+			rows: {
+				0: {
+					rowClass: 'tl-row col-xs-12',
+					start: '4',
+					end: '7'
+				}
+			},
+			columns: {
+				0: {
+					colClass: 'tl-col col-xs-12 col-md-9',
+					start: '0',
+					end: '2'
+				}
+			},
+			tiles: {
+				0: 'col-xs-12 col-md-7',
+				1: 'col-xs-12 col-md-2',
+				2: 'col-xs-12 col-md-5',
+				3: 'col-xs-12 col-md-3',
+				4: 'col-xs-12 col-md-3',
+				5: 'col-xs-12 col-md-3',
+				6: 'col-xs-12 col-md-3',
+				7: 'col-xs-12 col-md-3'
+			},
+			animations: {
+				0: { tlClass:'tl-slide-right', tlClassF:'tl-slide-right-in', tlDelay:150 },
+				1: { tlClass:'tl-slide-right', tlClassF:'tl-slide-right-in', tlDelay:50 },
+				2: { tlClass:'tl-slide-right', tlClassF:'tl-slide-right-in', tlDelay:150 },
+				3: { tlClass:'tl-slide-right', tlClassF:'tl-slide-right-in', tlDelay:150 },
+				4: { tlClass:'tl-slide-right', tlClassF:'tl-slide-right-in', tlDelay:250 },
+				5: { tlClass:'tl-slide-right', tlClassF:'tl-slide-right-in', tlDelay:550 },
+				6: { tlClass:'tl-slide-right', tlClassF:'tl-slide-right-in', tlDelay:150 },
+				7: { tlClass:'tl-slide-right', tlClassF:'tl-slide-right-in', tlDelay:350 }
+			}
+		}
+	}
+}
+	
+$('[id^=load_live_]').on('click', function() {
+	var num = $(this).attr('id').replace('load_live_','');
+	var opt = {
+		templateObj: animObj[num]
 	};
-	var opt10 = {
-		templateObj: temp10
-	};	
-	$('#load_live_10').on('click', function() {
-		$('#live10').jstiles(opt10);
-	});
+	var sel = $('#live' + num);
+	sel.jstiles('destroy');
+	sel.jstiles(opt);
 });
+
 $('#destroy').on('click', function() {
 	$('#tiles-container').jstiles('destroy');
 });

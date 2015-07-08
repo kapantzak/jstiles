@@ -601,14 +601,16 @@
 				<li>tlClassF [string]: The class that the specific tile will get and trigger the css animation.</li>
 				<li>tlDelay [number]: The time in milliseconds that the animation will wait until it starts getting executed.</li>
 			</ul>
-			<p>At the moment, there are four animations ready to be used but more are coming! You can create your self your own animation type by adding a new set of css rules that will perform a different animation!</p>
+			<p>At the moment, there are six animations ready to be used but more are coming! You can create your self your own animation type by adding a new set of css rules that will perform a different animation!</p>
 			<p>These are the available animation types:</p>
-			<ul>
+			<ol>
 				<li>tl-scale</li>
 				<li>tl-fade</li>
 				<li>tl-slide-up</li>
 				<li>tl-slide-down</li>
-			</ul>
+				<li>tl-slide-left</li>
+				<li>tl-slide-right</li>
+			</ol>
 			<div class="alert alert-info" role="alert">Click the buttons to initialize the plugin</div>
 			
 			<h3 class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-scale</h3>
@@ -719,7 +721,7 @@
 				</div>
 				<div id="live10" class="live-tiles col-xs-12">
 					<div class="tl-page" data-tl-template="myTemplate">
-						<div></div>
+						<div class="test"></div>
 						<div></div>
 						<div></div>
 						<div></div>
@@ -730,6 +732,68 @@
 					</div>
 				</div>
 			</div>
+			
+			<h3 class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-slide-left</h3>
+						
+			<div class="codeBlock">
+				<span class="codeHeader">Animations object (tl-slide-left)</span>
+				<code>
+					animations: {<br />
+					&nbsp;0: { tlClass:'tl-slide-left', tlClassF:'tl-slide-left-in', tlDelay:150 },<br />
+					&nbsp;<i>//...</i><br />
+					}<br />
+				</code>
+			</div>
+			
+			<div class="live-example marginTop-lg">
+				<div class="live-header col-xs-12">
+					Example#4.5 - Animations (tl-slide-left) <button id="load_live_11" type="button" class="btn btn-default load_live">Initialize plugin</button>
+				</div>
+				<div id="live11" class="live-tiles col-xs-12">
+					<div class="tl-page" data-tl-template="myTemplate">
+						<div class="test"></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			
+			<h3 class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-slide-right</h3>
+						
+			<div class="codeBlock">
+				<span class="codeHeader">Animations object (tl-slide-right)</span>
+				<code>
+					animations: {<br />
+					&nbsp;0: { tlClass:'tl-slide-right', tlClassF:'tl-slide-right-in', tlDelay:150 },<br />
+					&nbsp;<i>//...</i><br />
+					}<br />
+				</code>
+			</div>
+			
+			<div class="live-example marginTop-lg">
+				<div class="live-header col-xs-12">
+					Example#4.6 - Animations (tl-slide-right) <button id="load_live_12" type="button" class="btn btn-default load_live">Initialize plugin</button>
+				</div>
+				<div id="live12" class="live-tiles col-xs-12">
+					<div class="tl-page" data-tl-template="myTemplate">
+						<div class="test"></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			
+			<p>Feel free to mix up those animation into the same template object to achieve your custom animation!</p>
 			
 			<h2 class="marginTop-lg">Configuration</h2>
 			

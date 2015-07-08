@@ -100,7 +100,7 @@
 	padding:5px;
 	transition: all 250ms ease-out;
 }
-/* Animations ---------------------------- */
+/* Animations (start) ---------------------------- */
 /* Scale */
 .tl-tile.tl-scale { transform: scale(0) }
 .tl-tile.tl-scale-up { transform: scale(1) }
@@ -127,6 +127,27 @@
 	opacity:1;
 	top:0;
 }
+/* Slide left */
+.tl-tile.tl-slide-left { 
+	position:relative;
+	opacity:0;
+	left:-100px;
+}
+.tl-tile.tl-slide-left-in { 
+	opacity:1;
+	left:0;
+}
+/* Slide right */
+.tl-tile.tl-slide-right { 
+	position:relative;
+	opacity:0;
+	right:-100px;
+}
+.tl-tile.tl-slide-right-in { 
+	opacity:1;
+	right:0;
+}
+/* Animations (end) ------------------------------ */
 
 .tl-bottom {
 	/* position:absolute;
