@@ -9,7 +9,7 @@
 	<link href="css/style.css" rel="stylesheet" />
 	<link href="scripts/jstiles/css/tl-style.css" rel="stylesheet" />
 </head>
-<body>
+<body data-spy="scroll" data-target="#side-nav-affix">
 	
 	<div id="header" class="fullDiv">
 		<div id="main-logo">			
@@ -108,807 +108,840 @@
 				
 	</div>
 		
-	<div id="goTop">Top</div>
+	<div id="goTop" class="hidden">Top</div>
 	
-	<div id="contentNarrow" class="col-xs-12 col-md-6 col-md-offset-3">
+	<div id="contentNarrow" class="col-xs-12 col-md-8 col-md-offset-2">
 	
-		<div class="col-xs-12 marginTop-md">
-			<h1 id="initialization" class="section-header">Initialization</h1>
-			<div class="row">
-			
-				<div class="col-xs-12 marginTop-md">
-					<p>As a jQuery - Bootstrap plugin, in order to use <strong>jsTiles</strong> you have to include both jQuery and Bootstrap into your project. You also have to include jQuery easing in order to let animations get smoothly executed.</p>
-					<p>Include the following resources to your head section as shown below.</p>
-					<ul>
-						<li>Bootstrap - <a href="http://getbootstrap.com/" target="_blank">http://getbootstrap.com/</a></li>
-						<li>jQuery - <a href="https://jquery.com/" target="_blank">https://jquery.com/</a></li>
-						<li>jQuery easing - <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">http://gsgd.co.uk/sandbox/jquery/easing/</a></li>
-						<li>jsTiles - <a href="https://github.com/kapantzak/jstiles" target="_blank">https://github.com/kapantzak/jstiles</a></li>
-					</ul>
-				</div>
+		<div class="col-xs-12 col-md-9">
+		
+			<div class="col-xs-12 marginTop-md">
+				<h1 id="initialization" class="section-header">Initialization</h1>
+				<div class="row">
 				
-				<div class="col-xs-12 marginTop-md">
-				
-					<div class="codeBlock">
-						<span class="codeHeader">HTML - Head</span>
-						<code>
-							&lt;head&gt;<br />
-							&nbsp;&lt;link href="../bootstrap-x.x.x/css/bootstrap.min.css" rel="stylesheet" /&gt;<br />
-							&nbsp;&lt;link href="../jstiles/css/tl-style.css" rel="stylesheet" /&gt;<br />
-							&nbsp;&lt;script src="../jQuery.js"&gt;&lt;/script&gt;<br />
-							&nbsp;&lt;script src="../jstiles/jstiles.js"&gt;&lt;/script&gt;<br />
-							&lt;/head&gt;<br />
-						</code>
+					<div class="col-xs-12 marginTop-md">
+						<p>As a jQuery - Bootstrap plugin, in order to use <strong>jsTiles</strong> you have to include both jQuery and Bootstrap into your project. You also have to include jQuery easing in order to let animations get smoothly executed.</p>
+						<p>Include the following resources to your head section as shown below.</p>
+						<ul>
+							<li>Bootstrap - <a href="http://getbootstrap.com/" target="_blank">http://getbootstrap.com/</a></li>
+							<li>jQuery - <a href="https://jquery.com/" target="_blank">https://jquery.com/</a></li>
+							<li>jQuery easing - <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">http://gsgd.co.uk/sandbox/jquery/easing/</a></li>
+							<li>jsTiles - <a href="https://github.com/kapantzak/jstiles" target="_blank">https://github.com/kapantzak/jstiles</a></li>
+						</ul>
+					</div>
+					
+					<div class="col-xs-12 marginTop-md">
+					
+						<div class="codeBlock">
+							<span class="codeHeader">HTML - Head</span>
+							<code>
+								&lt;head&gt;<br />
+								&nbsp;&lt;link href="../bootstrap-x.x.x/css/bootstrap.min.css" rel="stylesheet" /&gt;<br />
+								&nbsp;&lt;link href="../jstiles/css/tl-style.css" rel="stylesheet" /&gt;<br />
+								&nbsp;&lt;script src="../jQuery.js"&gt;&lt;/script&gt;<br />
+								&nbsp;&lt;script src="../jstiles/jstiles.js"&gt;&lt;/script&gt;<br />
+								&lt;/head&gt;<br />
+							</code>
+						</div>
+						
+					</div>
+					
+					<div class="col-xs-12 marginTop-md">
+						<p>But where are you going to initialize jsTiles plugin? All you have to provide is a simple set of divs (the tiles) wrapped in a <i>page</i> container and an outer div that holds the page and the containing tiles.</p>
+						<p>Below you can see the most simple form of html markup that jsTile require in order to create your tiles.</p>
+					</div>
+					
+					<div class="col-xs-12 marginTop-md">
+					
+						<div class="codeBlock">
+							<span class="codeHeader">HTML - Body</span>
+							<code>
+								<i>//The outer container --> initialize here</i><br />
+								&lt;div id="tiles-container"&gt;<br />
+									&nbsp;<i>//The page section</i><br />
+									&nbsp;&lt;div class="tl-page" data-tl-template="tempA"&gt;<br />
+										&nbsp;&nbsp;&nbsp;<i>//Place the tiles here</i><br />
+										&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+										&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+										&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+										&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+										&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+										&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+										&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+										&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+										&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+										&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+									&nbsp;&lt;/div&gt;<br />
+								&lt;/div&gt;<br />
+							</code>
+						</div>
+						
+					</div>
+					
+					<div class="col-xs-12 marginTop-md">
+						<p>It is very important to provide a <i><strong>"tl-page"</strong></i> class to the page section. jsTiles will take care of the rest and create your tiles inside each page section.</p>
+						<p>You can place more than one page sections and provide a different template for each one of them!</p>
+						<p>You can set the page template via the <i><strong>"data-tl-template"</strong></i> attribute to the page section div. If you do not provide a specific template, jsTiles will set a default one.</p>
+						<p>You can initialize jsTiles in one line of code as shown below.</p>
+					</div>
+					
+					<div class="col-xs-12 marginTop-md">
+					
+						<div class="codeBlock">
+							<span class="codeHeader">jQuery - Initialization</span>
+							<code>
+								$('#tiles-container').jstiles();
+							</code>
+						</div>
+						
+					</div>
+					
+					<div class="col-xs-12 marginTop-md">
+						<p>And you have your tiles!</p>
 					</div>
 					
 				</div>
+			</div>
+			
+			<div class="col-xs-12 marginTop-md">
+				<h1 id="options" class="section-header">Options</h1>
+				<div class="row">
 				
-				<div class="col-xs-12 marginTop-md">
-					<p>But where are you going to initialize jsTiles plugin? All you have to provide is a simple set of divs (the tiles) wrapped in a <i>page</i> container and an outer div that holds the page and the containing tiles.</p>
-					<p>Below you can see the most simple form of html markup that jsTile require in order to create your tiles.</p>
-				</div>
-				
-				<div class="col-xs-12 marginTop-md">
-				
-					<div class="codeBlock">
-						<span class="codeHeader">HTML - Body</span>
-						<code>
-							<i>//The outer container --> initialize here</i><br />
-							&lt;div id="tiles-container"&gt;<br />
-								&nbsp;<i>//The page section</i><br />
-								&nbsp;&lt;div class="tl-page" data-tl-template="tempA"&gt;<br />
-									&nbsp;&nbsp;&nbsp;<i>//Place the tiles here</i><br />
-									&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-									&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-									&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-									&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-									&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-									&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-									&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-									&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-									&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-									&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-								&nbsp;&lt;/div&gt;<br />
-							&lt;/div&gt;<br />
-						</code>
+					<div class="col-xs-12 marginTop-md">
+						<p>There is a number of options you can use in order to customize the appearance and behaviour of the plugin. Check them below or go to <a href="https://github.com/kapantzak/jstiles" target="_blank">README</a> file!</p>
 					</div>
 					
-				</div>
-				
-				<div class="col-xs-12 marginTop-md">
-					<p>It is very important to provide a <i><strong>"tl-page"</strong></i> class to the page section. jsTiles will take care of the rest and create your tiles inside each page section.</p>
-					<p>You can place more than one page sections and provide a different template for each one of them!</p>
-					<p>You can set the page template via the <i><strong>"data-tl-template"</strong></i> attribute to the page section div. If you do not provide a specific template, jsTiles will set a default one.</p>
-					<p>You can initialize jsTiles in one line of code as shown below.</p>
-				</div>
-				
-				<div class="col-xs-12 marginTop-md">
-				
-					<div class="codeBlock">
-						<span class="codeHeader">jQuery - Initialization</span>
-						<code>
-							$('#tiles-container').jstiles();
-						</code>
+					<!-- loader -->
+					<div class="col-xs-12">
+						<h2>loader [number]</h2>
+						<p>Provide a number (greater that zero) that indicates the duration (in milliseconds) of the loader appearance, if you want to display the loader before the tiles load.</p>
+						<p>If you want to display the tiles immediately on load, set this option to zero.</p>
+						<div class="well well-lg">
+							<ul>
+								<li><span>Possible values:</span><span>[number] (any number greater than zero)</span></li>
+								<li><span>Default value:</span><span>500</span></li>
+							</ul>
+						</div>
 					</div>
 					
-				</div>
-				
-				<div class="col-xs-12 marginTop-md">
-					<p>And you have your tiles!</p>
-				</div>
-				
-			</div>
-		</div>
-		
-		<div class="col-xs-12 marginTop-md">
-			<h1 id="options" class="section-header">Options</h1>
-			<div class="row">
-			
-				<div class="col-xs-12 marginTop-md">
-					<p>There is a number of options you can use in order to customize the appearance and behaviour of the plugin. Check them below or go to <a href="https://github.com/kapantzak/jstiles" target="_blank">README</a> file!</p>
-				</div>
-				
-				<!-- loader -->
-				<div class="col-xs-12">
-					<h2>loader [number]</h2>
-					<p>Provide a number (greater that zero) that indicates the duration (in milliseconds) of the loader appearance, if you want to display the loader before the tiles load.</p>
-					<p>If you want to display the tiles immediately on load, set this option to zero.</p>
-					<div class="well well-lg">
-						<ul>
-							<li><span>Possible values:</span><span>[number] (any number greater than zero)</span></li>
-							<li><span>Default value:</span><span>500</span></li>
-						</ul>
+					<!-- loaderHtml -->
+					<div class="col-xs-12">
+						<h2>loaderHtml [string]</h2>
+						<p>If you want to display a custom loader you can set it right here! Just pass your loader HTML markup through loaderHtml option as shown in the example below.</p>					
+						<div class="codeBlock">
+							<span class="codeHeader">Custom loader</span>
+							<code>
+								var opt = {<br />
+								&nbsp;loaderHtml: '&lt;div id="my_custom_loader"&gt;Loading!!!&lt;/div&gt;'<br />
+								}<br />
+								$('#tiles-container').jstiles(opt);
+							</code>
+						</div>
+						<p>If this option is set to false and the loader option is not zero, jsTiles will display the default loader (refresh this page and you will see it!).</p>
+						<div class="well well-lg">
+							<ul>
+								<li><span>Possible values:</span><span>[string] (any valid HTML)</span></li>
+								<li><span>Default value:</span><span>false</span></li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				
-				<!-- loaderHtml -->
-				<div class="col-xs-12">
-					<h2>loaderHtml [string]</h2>
-					<p>If you want to display a custom loader you can set it right here! Just pass your loader HTML markup through loaderHtml option as shown in the example below.</p>					
-					<div class="codeBlock">
-						<span class="codeHeader">Custom loader</span>
-						<code>
-							var opt = {<br />
-							&nbsp;loaderHtml: '&lt;div id="my_custom_loader"&gt;Loading!!!&lt;/div&gt;'<br />
-							}<br />
-							$('#tiles-container').jstiles(opt);
-						</code>
-					</div>
-					<p>If this option is set to false and the loader option is not zero, jsTiles will display the default loader (refresh this page and you will see it!).</p>
-					<div class="well well-lg">
-						<ul>
-							<li><span>Possible values:</span><span>[string] (any valid HTML)</span></li>
-							<li><span>Default value:</span><span>false</span></li>
-						</ul>
-					</div>
-				</div>
-				
-				<!-- templateObj -->
-				<div class="col-xs-12">
-					<h2>templateObj [object]</h2>
-					<p>With this option you can tell the plugin to include your custom templates too, so that you can apply them to any page you want!</p>	
-					<p>Check the <a class="innerAnchor" href="#templates">TEMPLATES TUTORIAL</a> to learn how you can create your custom template.</p>
-					<div class="codeBlock">
-						<span class="codeHeader">Custom template</span>
-						<code>
-							var myCustomTemplate = {<br />
-							&nbsp;<i>//Create your template object here</i><br />
-							}<br />
-							var opt = {<br />
-							&nbsp;templateObj: myCustomTemplate<br />
-							}<br />
-							$('#tiles-container').jstiles(opt);
-						</code>
-					</div>
-					<div class="well well-lg">
-						<ul>
-							<li><span>Possible values:</span><span>[object] (a template object - check the tutorial)</span></li>
-							<li><span>Default value:</span><span>false</span></li>
-						</ul>
-					</div>
-				</div>
-				
-				<!-- pageHome -->
-				<div class="col-xs-12">
-					<h2>pageHome [number]</h2>
-					<p>Set the page that is going to be visible on load by providing a zero based index. For example, if you want the second page to be visible on load, you must set this option equal to 1.</p>
-					<p><span class="label label-warning">Note</span> This option will take no effect if you have only one page to display. Also, you must provide a number that is not greater than the pages number minus one (eg if you have 3 pages, you can set this option up to the value of 2).</p>
-					<div class="well well-lg">
-						<ul>
-							<li><span>Possible values:</span><span>[number] (zero based index)</span></li>
-							<li><span>Default value:</span><span>0</span></li>
-						</ul>
-					</div>
-				</div>
-				
-				<!-- tilePadding -->
-				<div class="col-xs-12">
-					<h2>tilePadding [string]</h2>
-					<p>Set the padding of the tiles. By default, this option is set to false, so that the tiles can take the default padding (5px) from the css file.</p>
-					<p><span class="label label-warning">Note</span> This option applies the same padding to all tiles. However, you can provide specific padding value to a specific tile through the <a class="innerAnchor" href="#templates">template object</a>.</p>
-					<div class="well well-lg">
-						<ul>
-							<li><span>Possible values:</span><span>[string] (any valid padding value)</span></li>
-							<li><span>Default value:</span><span>false</span></li>
-						</ul>
-					</div>
-				</div>
-				
-				<!-- tileRatio -->
-				<div class="col-xs-12">
-					<h2>tileRatio [number]</h2>
-					<p>Set the height to width ratio of the tiles. By default, this option is set to false, so that the tiles can take the default ratio (0.57) from the css file.</p>
-					<p><span class="label label-warning">Note</span> This option applies the same ratio to all tiles. However, you can provide specific ratio value to a specific tile through the <a class="innerAnchor" href="#templates">template object</a>.</p>
-					<div class="well well-lg">
-						<ul>
-							<li><span>Possible values:</span><span>[number] (any number greater that zero)</span></li>
-							<li><span>Default value:</span><span>false</span></li>
-						</ul>
-					</div>
-				</div>
-				
-				<!-- sliderEasing -->
-				<div class="col-xs-12">
-					<h2>sliderEasing [string]</h2>
-					<p>Set the easing function for the sliding animation of the pages.</p>
-					<div class="well well-lg">
-						<ul>
-							<li><span>Possible values:</span><span>[string] (any valid easing function)</span></li>
-							<li><span>Default value:</span><span>'easeInOutExpo'</span></li>
-						</ul>
-					</div>
-				</div>
-				
-				<!-- slideDuration -->
-				<div class="col-xs-12">
-					<h2>slideDuration [number]</h2>
-					<p>Set the duration of the pages sliding animation in milliseconds.</p>
-					<div class="well well-lg">
-						<ul>
-							<li><span>Possible values:</span><span>[number] (any positive number)</span></li>
-							<li><span>Default value:</span><span>450</span></li>
-						</ul>
-					</div>
-				</div>
 					
+					<!-- templateObj -->
+					<div class="col-xs-12">
+						<h2>templateObj [object]</h2>
+						<p>With this option you can tell the plugin to include your custom templates too, so that you can apply them to any page you want!</p>	
+						<p>Check the <a class="innerAnchor" href="#templates">TEMPLATES TUTORIAL</a> to learn how you can create your custom template.</p>
+						<div class="codeBlock">
+							<span class="codeHeader">Custom template</span>
+							<code>
+								var myCustomTemplate = {<br />
+								&nbsp;<i>//Create your template object here</i><br />
+								}<br />
+								var opt = {<br />
+								&nbsp;templateObj: myCustomTemplate<br />
+								}<br />
+								$('#tiles-container').jstiles(opt);
+							</code>
+						</div>
+						<div class="well well-lg">
+							<ul>
+								<li><span>Possible values:</span><span>[object] (a template object - check the tutorial)</span></li>
+								<li><span>Default value:</span><span>false</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- pageHome -->
+					<div class="col-xs-12">
+						<h2>pageHome [number]</h2>
+						<p>Set the page that is going to be visible on load by providing a zero based index. For example, if you want the second page to be visible on load, you must set this option equal to 1.</p>
+						<p><span class="label label-warning">Note</span> This option will take no effect if you have only one page to display. Also, you must provide a number that is not greater than the pages number minus one (eg if you have 3 pages, you can set this option up to the value of 2).</p>
+						<div class="well well-lg">
+							<ul>
+								<li><span>Possible values:</span><span>[number] (zero based index)</span></li>
+								<li><span>Default value:</span><span>0</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- tilePadding -->
+					<div class="col-xs-12">
+						<h2>tilePadding [string]</h2>
+						<p>Set the padding of the tiles. By default, this option is set to false, so that the tiles can take the default padding (5px) from the css file.</p>
+						<p><span class="label label-warning">Note</span> This option applies the same padding to all tiles. However, you can provide specific padding value to a specific tile through the <a class="innerAnchor" href="#templates">template object</a>.</p>
+						<div class="well well-lg">
+							<ul>
+								<li><span>Possible values:</span><span>[string] (any valid padding value)</span></li>
+								<li><span>Default value:</span><span>false</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- tileRatio -->
+					<div class="col-xs-12">
+						<h2>tileRatio [number]</h2>
+						<p>Set the height to width ratio of the tiles. By default, this option is set to false, so that the tiles can take the default ratio (0.57) from the css file.</p>
+						<p><span class="label label-warning">Note</span> This option applies the same ratio to all tiles. However, you can provide specific ratio value to a specific tile through the <a class="innerAnchor" href="#templates">template object</a>.</p>
+						<div class="well well-lg">
+							<ul>
+								<li><span>Possible values:</span><span>[number] (any number greater that zero)</span></li>
+								<li><span>Default value:</span><span>false</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- sliderEasing -->
+					<div class="col-xs-12">
+						<h2>sliderEasing [string]</h2>
+						<p>Set the easing function for the sliding animation of the pages.</p>
+						<div class="well well-lg">
+							<ul>
+								<li><span>Possible values:</span><span>[string] (any valid easing function)</span></li>
+								<li><span>Default value:</span><span>'easeInOutExpo'</span></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- slideDuration -->
+					<div class="col-xs-12">
+						<h2>slideDuration [number]</h2>
+						<p>Set the duration of the pages sliding animation in milliseconds.</p>
+						<div class="well well-lg">
+							<ul>
+								<li><span>Possible values:</span><span>[number] (any positive number)</span></li>
+								<li><span>Default value:</span><span>450</span></li>
+							</ul>
+						</div>
+					</div>
+						
+				</div>
 			</div>
+			
+			<div class="col-xs-12 marginTop-md">
+				<h1 id="methods" class="section-header">Methods</h1>
+				<div class="row">
+					<!-- destroy -->
+					<div class="col-xs-12">
+						<h2>destroy</h2>
+						<p>This method removes any data attached to the selector as any element that was appended in order to display the tiles.</p>			
+						<p>How to call it? Check the following example.</p>
+						<div class="codeBlock">
+							<span class="codeHeader">Destroy the plugin</span>
+							<code>
+								$('#tiles-container').jstiles('destroy');
+							</code>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 marginTop-md">
+				<h1 id="templates" class="section-header">Templates</h1>
+				<p>In this section you are going to learn how to create your own custom template and how to use it in your project.</p>		
+				<p>Let's assume that we have the following HTML markup with one page and four tiles.</p>
+				
+				<div class="codeBlock">
+					<span class="codeHeader">HTML</span>
+					<code>
+						&lt;div id="tiles-container"&gt;<br />
+							&nbsp;&lt;div class="tl-page" data-tl-template="myTemplate"&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
+							&nbsp;&lt;/div&gt;<br />
+						&lt;/div&gt;<br />
+					</code>
+				</div>
+				
+				<p>Let's create a basic template like the one below.</p>
+				<p>In order to create a custom template we have to set at least two things:</p>
+				<ul>
+					<li><strong>tilesNum</strong> [number]</li>
+					<li><strong>tiles</strong> [object]</li>
+				</ul>
+				
+				<div class="codeBlock">
+					<span class="codeHeader">Template object</span>
+					<code>
+						var myTemplateObject = {<br />
+						&nbsp;myTemplate: {<br />
+						&nbsp;&nbsp;tilesNum: 4,<br />
+						&nbsp;&nbsp;tiles: {<br />
+						&nbsp;&nbsp;&nbsp;0: 'col-xs-12 col-md-6',<br />
+						&nbsp;&nbsp;&nbsp;1: 'col-xs-12 col-md-6',<br />
+						&nbsp;&nbsp;&nbsp;2: 'col-xs-12 col-md-6',<br />
+						&nbsp;&nbsp;&nbsp;3: 'col-xs-12 col-md-6'<br />
+						&nbsp;&nbsp;}<br />
+						&nbsp;}<br />
+						}
+					</code>
+				</div>
+				
+				<p>And let's explain it's parts.</p>			
+				<p>First of all we have to indicate how many tiles the template has to process. We must provide the exact number of available elements inside the page that we are going to apply the specific template.</p>
+				<p><span class="label label-warning">Note</span> The plugin will not work if we provide a different number than the one of the actual tiles.</p>
+				
+				<div class="codeBlock">
+					<span class="codeHeader">Tiles number</span>
+					<code>
+						<i>//We have four divs inside the page element</i><br />
+						tilesNum: 4
+					</code>
+				</div>
+				
+				<p>The second step is to set the <strong>tiles</strong> object, within which we can use all of the available Bootstrap classes (grid layout).</p>
+				<p>So, let's set the tiles to occupy half of the available width for medium width screens and above, and the 100% of the available width for small screens.</p>
+				
+				<div class="codeBlock">
+					<span class="codeHeader">Tiles number</span>
+					<code>
+						tiles: {<br />
+						&nbsp;0: 'col-xs-12 col-md-6',<br />
+						&nbsp;1: 'col-xs-12 col-md-6',<br />
+						&nbsp;2: 'col-xs-12 col-md-6',<br />
+						&nbsp;3: 'col-xs-12 col-md-6'<br />
+						}<br />
+					</code>
+				</div>
+				
+				<p>Now that we have created our first custom template, we have to implement it. You can check the options section at the <strong>templateObj</strong> part to see how you can provide a custom template to the plugin.</p>
+				<p>Here is the jQuery that inserts the new template:</p>
+				
+				<div class="codeBlock">
+					<span class="codeHeader">Initialization</span>
+					<code>
+						var opt = {<br />
+						&nbsp;<i>//Set the custom template</i><br />
+						&nbsp;templateObj: myTemplateObject<br />
+						}<br />
+						$('#tiles-container').jstiles(opt);
+					</code>
+				</div>
+				
+				<p>And here is your first custom template!</p>
+				
+				<div class="live-example marginTop-lg">
+					<div class="live-header col-xs-12">
+						Example#1 - Basic template
+					</div>
+					<div id="live1" class="live-tiles col-xs-12">
+						<div class="tl-page" data-tl-template="myTemplate">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				
+				<h2 id="columns" class="marginTop-lg">Columns</h2>
+				
+				<p>There are times you might want to place some tiles inside a column and place that column wherever you want inside the tiles page.</p>
+				<p>You can achieve that by setting the optional <strong>columns</strong> object.</p>
+				<p>Let's edit our example and place one column that will contain the first three tiles and occupy the 9/12 of the available width.</p>
+				<p>All you have to do, is edit the template we created and add the columns object.</p>
+				
+				<div class="codeBlock">
+					<span class="codeHeader">Columns object</span>
+					<code>
+						columns: {<br />
+						&nbsp;0: {<br />
+						&nbsp;&nbsp;<i>//Set the column classes</i><br />
+						&nbsp;&nbsp;colClass: 'tl-col col-xs-12 col-md-9',<br />
+						&nbsp;&nbsp;<i>//Indicate the first tile inside the column (zero based index)</i><br />
+						&nbsp;&nbsp;start: '0',<br />
+						&nbsp;&nbsp;<i>//Indicate the last tile inside the column (zero based index)</i><br />
+						&nbsp;&nbsp;end: '2'<br />
+						&nbsp;}<br />
+						}<br />
+					</code>
+				</div>
+				
+				<p>However, the tiles that are going to be wrapped by the column will try to occupy the available width of this column, which is the 9/12 of the page column.</p>
+				<p>So, we have to slightly change some classes form the tiles object and adapt them to our new structure.</p>
+				
+				<div class="codeBlock">
+					<span class="codeHeader">Tiles object</span>
+					<code>
+						tiles: {<br />
+						&nbsp;0: 'col-xs-12 col-md-7',<br />
+						&nbsp;1: 'col-xs-12 col-md-2',<br />
+						&nbsp;2: 'col-xs-12 col-md-5',<br />
+						&nbsp;3: 'col-xs-12 col-md-3'<br />
+						}<br />
+					</code>
+				</div>
+				
+				<p>This is the result of our changes.</p>
+							
+				<div class="live-example marginTop-lg">
+					<div class="live-header col-xs-12">
+						Example#2 - Columns
+					</div>
+					<div id="live2" class="live-tiles col-xs-12">
+						<div class="tl-page" data-tl-template="myTemplate">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				
+				<h2 id="rows" class="marginTop-lg">Rows</h2>
+				
+				<p>Let's add four more tiles in the page and change our template as follows!</p>
+				
+				<div class="codeBlock">
+					<span class="codeHeader">Template object</span>
+					<code>
+						var myTemplateObject = {<br />
+						&nbsp;myTemplate: {<br />
+						&nbsp;&nbsp;tilesNum: 8,<br />
+						&nbsp;&nbsp;columns: {<br />
+						&nbsp;&nbsp;&nbsp;0: {<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;colClass: 'tl-col col-xs-12 col-md-9',<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;start: '0',<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;end: '2'<br />
+						&nbsp;&nbsp;&nbsp;}<br />
+						&nbsp;&nbsp;},<br />
+						&nbsp;&nbsp;tiles: {<br />
+						&nbsp;&nbsp;&nbsp;0: 'col-xs-12 col-md-7',<br />
+						&nbsp;&nbsp;&nbsp;1: 'col-xs-12 col-md-2',<br />
+						&nbsp;&nbsp;&nbsp;2: 'col-xs-12 col-md-5',<br />
+						&nbsp;&nbsp;&nbsp;3: 'col-xs-12 col-md-3',<br />
+						&nbsp;&nbsp;&nbsp;4: 'col-xs-12 col-md-3',<br />
+						&nbsp;&nbsp;&nbsp;5: 'col-xs-12 col-md-3',<br />
+						&nbsp;&nbsp;&nbsp;6: 'col-xs-12 col-md-3',<br />
+						&nbsp;&nbsp;&nbsp;7: 'col-xs-12 col-md-3'<br />
+						&nbsp;&nbsp;}<br />
+						&nbsp;}<br />
+						}
+					</code>
+				</div>
+				
+				<div class="live-example marginTop-lg">
+					<div class="live-header col-xs-12">
+						Example#3.1 - Rows
+					</div>
+					<div id="live3" class="live-tiles col-xs-12">
+						<div class="tl-page" data-tl-template="myTemplate">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				
+				<p>But we wanted all the new tiles to be places under the first four! Instead, the fifth tile goes under the fourth tile.</p>
+				<p>To overcome this obstacle we can place all the last four tiles inside a row. Let's create the <strong>rows</strong> object.</p>
+				
+				<div class="codeBlock">
+					<span class="codeHeader">Rows object</span>
+					<code>
+						rows: {<br />
+						&nbsp;0: {<br />
+						&nbsp;&nbsp;rowClass: 'tl-row col-xs-12',<br />
+						&nbsp;&nbsp;start: '4',<br />
+						&nbsp;&nbsp;end: '7'<br />
+						&nbsp;}<br />
+						}<br />
+					</code>
+				</div>
+				
+				<p>See how the last four tiles are aligned into a single row under the first four tiles.</p>
+				
+				<div class="live-example marginTop-lg">
+					<div class="live-header col-xs-12">
+						Example#3.2 - Rows
+					</div>
+					<div id="live4" class="live-tiles col-xs-12">
+						<div class="tl-page" data-tl-template="myTemplate">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				
+				<h2 id="animations" class="marginTop-lg">Animations</h2>
+				
+				<p>Now let's make our tiles more attractive by adding an animation on load. You can do this by creating an <strong>animations</strong> object.</p>
+				<p>The animations object is a set of objects that apply to each tile separately.</p>
+				<ul>
+					<li>tlClass [string]: The class that the specific tile will get.</li>
+					<li>tlClassF [string]: The class that the specific tile will get and trigger the css animation.</li>
+					<li>tlDelay [number]: The time in milliseconds that the animation will wait until it starts getting executed.</li>
+				</ul>
+				<p>At the moment, there are six animations ready to be used but more are coming! You can create your self your own animation type by adding a new set of css rules that will perform a different animation!</p>
+				<p>These are the available animation types:</p>
+				<ol>
+					<li>tl-scale</li>
+					<li>tl-fade</li>
+					<li>tl-slide-up</li>
+					<li>tl-slide-down</li>
+					<li>tl-slide-left</li>
+					<li>tl-slide-right</li>
+				</ol>
+				<div class="alert alert-info" role="alert">Click the buttons to initialize the plugin</div>
+				
+				<h3 id="tl-scale" class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-scale</h3>
+				
+				<div class="codeBlock">
+					<span class="codeHeader">Animations object (tl-scale)</span>
+					<code>
+						animations: {<br />
+						&nbsp;0: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },<br />
+						&nbsp;<i>//...</i><br />
+						}<br />
+					</code>
+				</div>
+				
+				<div class="live-example marginTop-lg">
+					<div class="live-header col-xs-12">
+						Example#4.1 - Animations (tl-scale) <button id="load_live_5" type="button" class="btn btn-default load_live">Initialize plugin</button>
+					</div>
+					<div id="live5" class="live-tiles col-xs-12">
+						<div class="tl-page" data-tl-template="myTemplate">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				
+				<h3 id="tl-fade" class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-fade</h3>
+							
+				<div class="codeBlock">
+					<span class="codeHeader">Animations object (tl-fade)</span>
+					<code>
+						animations: {<br />
+						&nbsp;0: { tlClass:'tl-fade', tlClassF:'tl-fade-in', tlDelay:150 },<br />
+						&nbsp;<i>//...</i><br />
+						}<br />
+					</code>
+				</div>
+				
+				<div class="live-example marginTop-lg">
+					<div class="live-header col-xs-12">
+						Example#4.2 - Animations (tl-fade) <button id="load_live_8" type="button" class="btn btn-default load_live">Initialize plugin</button>
+					</div>
+					<div id="live8" class="live-tiles col-xs-12">
+						<div class="tl-page" data-tl-template="myTemplate">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				
+				<h3 id="tl-slide-up" class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-slide-up</h3>
+							
+				<div class="codeBlock">
+					<span class="codeHeader">Animations object (tl-slide-up)</span>
+					<code>
+						animations: {<br />
+						&nbsp;0: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:150 },<br />
+						&nbsp;<i>//...</i><br />
+						}<br />
+					</code>
+				</div>
+				
+				<div class="live-example marginTop-lg">
+					<div class="live-header col-xs-12">
+						Example#4.3 - Animations (tl-slide-up) <button id="load_live_9" type="button" class="btn btn-default load_live">Initialize plugin</button>
+					</div>
+					<div id="live9" class="live-tiles col-xs-12">
+						<div class="tl-page" data-tl-template="myTemplate">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				
+				<h3 id="tl-slide-down" class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-slide-down</h3>
+							
+				<div class="codeBlock">
+					<span class="codeHeader">Animations object (tl-slide-down)</span>
+					<code>
+						animations: {<br />
+						&nbsp;0: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:150 },<br />
+						&nbsp;<i>//...</i><br />
+						}<br />
+					</code>
+				</div>
+				
+				<div class="live-example marginTop-lg">
+					<div class="live-header col-xs-12">
+						Example#4.4 - Animations (tl-slide-down) <button id="load_live_10" type="button" class="btn btn-default load_live">Initialize plugin</button>
+					</div>
+					<div id="live10" class="live-tiles col-xs-12">
+						<div class="tl-page" data-tl-template="myTemplate">
+							<div class="test"></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				
+				<h3 id="tl-slide-left" class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-slide-left</h3>
+							
+				<div class="codeBlock">
+					<span class="codeHeader">Animations object (tl-slide-left)</span>
+					<code>
+						animations: {<br />
+						&nbsp;0: { tlClass:'tl-slide-left', tlClassF:'tl-slide-left-in', tlDelay:150 },<br />
+						&nbsp;<i>//...</i><br />
+						}<br />
+					</code>
+				</div>
+				
+				<div class="live-example marginTop-lg">
+					<div class="live-header col-xs-12">
+						Example#4.5 - Animations (tl-slide-left) <button id="load_live_11" type="button" class="btn btn-default load_live">Initialize plugin</button>
+					</div>
+					<div id="live11" class="live-tiles col-xs-12">
+						<div class="tl-page" data-tl-template="myTemplate">
+							<div class="test"></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				
+				<h3 id="tl-slide-right" class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-slide-right</h3>
+							
+				<div class="codeBlock">
+					<span class="codeHeader">Animations object (tl-slide-right)</span>
+					<code>
+						animations: {<br />
+						&nbsp;0: { tlClass:'tl-slide-right', tlClassF:'tl-slide-right-in', tlDelay:150 },<br />
+						&nbsp;<i>//...</i><br />
+						}<br />
+					</code>
+				</div>
+				
+				<div class="live-example marginTop-lg">
+					<div class="live-header col-xs-12">
+						Example#4.6 - Animations (tl-slide-right) <button id="load_live_12" type="button" class="btn btn-default load_live">Initialize plugin</button>
+					</div>
+					<div id="live12" class="live-tiles col-xs-12">
+						<div class="tl-page" data-tl-template="myTemplate">
+							<div class="test"></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				
+				<p>Feel free to mix up those animation into the same template object to achieve your custom animation!</p>
+				
+				<h2 id="configuration" class="marginTop-lg">Configuration</h2>
+				
+				<p>We've seen in options section that we can set another padding or ratio for the tiles by just passing the right values to the appropriate options (tilePadding - tileRatio).</p>
+				<p>These options get applied to all tiles. But, what if you would like to set specific padding or/and ratio for a specific tile?</p>
+				<p><strong>config</strong> object is what you need!</p>
+				<p>Let's add a config object to our custom template in order to give a specific padding and ratio to the first tile.</p>
+				
+				<div class="codeBlock">
+					<span class="codeHeader">Config object</span>
+					<code>
+						config: {<br />
+						&nbsp;0: {<br />
+						&nbsp;&nbsp;<i>//Set the padding with a valid string</i><br />
+						&nbsp;&nbsp;padding: '30px',<br />
+						&nbsp;&nbsp;<i>//Set the ration with a positive number</i><br />
+						&nbsp;&nbsp;ratio: 1,<br />
+						&nbsp;}<br />
+						}<br />
+					</code>
+				</div>
+				
+				<p>Check the followng example. The first tile has a padding of 30px and it's height/width ratio is equal to 1 (a perfect square!).</p>
+				
+				<div class="live-example marginTop-lg">
+					<div class="live-header col-xs-12">
+						Example#5 - Configuration
+					</div>
+					<div id="live6" class="live-tiles col-xs-12">
+						<div class="tl-page" data-tl-template="myTemplate">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 marginTop-md">
+				<h1 id="paging" class="section-header">Paging</h1>
+				<p>In many occasions you might want to split your tiles in pages and implement a smooth navigation.</p>
+				<p>jsTiles gives you the ability to implement this feature simply by wrapping the desired tiles into a page section and apply an appropriate template for each page.</p>
+				<p>Let's add another page to our previous example and set our custom template and the default 'tempA' template to the first and second page respectively.</p>
+				
+				<div class="codeBlock">
+					<span class="codeHeader">HTML</span>
+					<code>
+						&lt;div id="tiles-container"&gt;<br />
+							&nbsp;&lt;div class="tl-page" data-tl-template="myTemplate"&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+							&nbsp;&lt;/div&gt;<br />
+							&nbsp;&lt;div class="tl-page" data-tl-template="tempA"&gt;<br />
+								&nbsp;&nbsp;&nbsp;<i>&lt;!-- tempA needs 10 tiles to work, so we add a page with 10 divs --&gt;</i><br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+								&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
+							&nbsp;&lt;/div&gt;<br />
+						&lt;/div&gt;<br />
+					</code>
+				</div>
+				
+				<p>Now just initialize the plugin just like you have done it so far. jsTiles will recognize that there are more than one pages and will implement the paging feature automatically.</p>
+				
+				<div class="live-example marginTop-lg">
+					<div class="live-header col-xs-12">
+						Example#6 - Paging
+					</div>
+					<div id="live7" class="live-tiles col-xs-12">
+						<div class="tl-page" data-tl-template="myTemplate">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<div class="tl-page" data-tl-template="tempA">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				
+				<p class="marginTop-lg">Now you are ready to experiment and create beautiful tiles taking advantage of the many options that are available form Bootstrap!</p>
+				
+			</div>
+			
 		</div>
 		
-		<div class="col-xs-12 marginTop-md">
-			<h1 class="section-header">Methods</h1>
-			<div class="row">
-				<!-- destroy -->
-				<div class="col-xs-12">
-					<h2>destroy</h2>
-					<p>This method removes any data attached to the selector as any element that was appended in order to display the tiles.</p>			
-					<p>How to call it? Check the following example.</p>
-					<div class="codeBlock">
-						<span class="codeHeader">Destroy the plugin</span>
-						<code>
-							$('#tiles-container').jstiles('destroy');
-						</code>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="col-xs-12 marginTop-md">
-			<h1 id="templates" class="section-header">Templates</h1>
-			<p>In this section you are going to learn how to create your own custom template and how to use it in your project.</p>		
-			<p>Let's assume that we have the following HTML markup with one page and four tiles.</p>
-			
-			<div class="codeBlock">
-				<span class="codeHeader">HTML</span>
-				<code>
-					&lt;div id="tiles-container"&gt;<br />
-						&nbsp;&lt;div class="tl-page" data-tl-template="myTemplate"&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;Content&lt;/div&gt;<br />
-						&nbsp;&lt;/div&gt;<br />
-					&lt;/div&gt;<br />
-				</code>
-			</div>
-			
-			<p>Let's create a basic template like the one below.</p>
-			<p>In order to create a custom template we have to set at least two things:</p>
-			<ul>
-				<li><strong>tilesNum</strong> [number]</li>
-				<li><strong>tiles</strong> [object]</li>
-			</ul>
-			
-			<div class="codeBlock">
-				<span class="codeHeader">Template object</span>
-				<code>
-					var myTemplateObject = {<br />
-					&nbsp;myTemplate: {<br />
-					&nbsp;&nbsp;tilesNum: 4,<br />
-					&nbsp;&nbsp;tiles: {<br />
-					&nbsp;&nbsp;&nbsp;0: 'col-xs-12 col-md-6',<br />
-					&nbsp;&nbsp;&nbsp;1: 'col-xs-12 col-md-6',<br />
-					&nbsp;&nbsp;&nbsp;2: 'col-xs-12 col-md-6',<br />
-					&nbsp;&nbsp;&nbsp;3: 'col-xs-12 col-md-6'<br />
-					&nbsp;&nbsp;}<br />
-					&nbsp;}<br />
-					}
-				</code>
-			</div>
-			
-			<p>And let's explain it's parts.</p>			
-			<p>First of all we have to indicate how many tiles the template has to process. We must provide the exact number of available elements inside the page that we are going to apply the specific template.</p>
-			<p><span class="label label-warning">Note</span> The plugin will not work if we provide a different number than the one of the actual tiles.</p>
-			
-			<div class="codeBlock">
-				<span class="codeHeader">Tiles number</span>
-				<code>
-					<i>//We have four divs inside the page element</i><br />
-					tilesNum: 4
-				</code>
-			</div>
-			
-			<p>The second step is to set the <strong>tiles</strong> object, within which we can use all of the available Bootstrap classes (grid layout).</p>
-			<p>So, let's set the tiles to occupy half of the available width for medium width screens and above, and the 100% of the available width for small screens.</p>
-			
-			<div class="codeBlock">
-				<span class="codeHeader">Tiles number</span>
-				<code>
-					tiles: {<br />
-					&nbsp;0: 'col-xs-12 col-md-6',<br />
-					&nbsp;1: 'col-xs-12 col-md-6',<br />
-					&nbsp;2: 'col-xs-12 col-md-6',<br />
-					&nbsp;3: 'col-xs-12 col-md-6'<br />
-					}<br />
-				</code>
-			</div>
-			
-			<p>Now that we have created our first custom template, we have to implement it. You can check the options section at the <strong>templateObj</strong> part to see how you can provide a custom template to the plugin.</p>
-			<p>Here is the jQuery that inserts the new template:</p>
-			
-			<div class="codeBlock">
-				<span class="codeHeader">Initialization</span>
-				<code>
-					var opt = {<br />
-					&nbsp;<i>//Set the custom template</i><br />
-					&nbsp;templateObj: myTemplateObject<br />
-					}<br />
-					$('#tiles-container').jstiles(opt);
-				</code>
-			</div>
-			
-			<p>And here is your first custom template!</p>
-			
-			<div class="live-example marginTop-lg">
-				<div class="live-header col-xs-12">
-					Example#1 - Basic template
-				</div>
-				<div id="live1" class="live-tiles col-xs-12">
-					<div class="tl-page" data-tl-template="myTemplate">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-			
-			<h2 class="marginTop-lg">Columns</h2>
-			
-			<p>There are times you might want to place some tiles inside a column and place that column wherever you want inside the tiles page.</p>
-			<p>You can achieve that by setting the optional <strong>columns</strong> object.</p>
-			<p>Let's edit our example and place one column that will contain the first three tiles and occupy the 9/12 of the available width.</p>
-			<p>All you have to do, is edit the template we created and add the columns object.</p>
-			
-			<div class="codeBlock">
-				<span class="codeHeader">Columns object</span>
-				<code>
-					columns: {<br />
-					&nbsp;0: {<br />
-					&nbsp;&nbsp;<i>//Set the column classes</i><br />
-					&nbsp;&nbsp;colClass: 'tl-col col-xs-12 col-md-9',<br />
-					&nbsp;&nbsp;<i>//Indicate the first tile inside the column (zero based index)</i><br />
-					&nbsp;&nbsp;start: '0',<br />
-					&nbsp;&nbsp;<i>//Indicate the last tile inside the column (zero based index)</i><br />
-					&nbsp;&nbsp;end: '2'<br />
-					&nbsp;}<br />
-					}<br />
-				</code>
-			</div>
-			
-			<p>However, the tiles that are going to be wrapped by the column will try to occupy the available width of this column, which is the 9/12 of the page column.</p>
-			<p>So, we have to slightly change some classes form the tiles object and adapt them to our new structure.</p>
-			
-			<div class="codeBlock">
-				<span class="codeHeader">Tiles object</span>
-				<code>
-					tiles: {<br />
-					&nbsp;0: 'col-xs-12 col-md-7',<br />
-					&nbsp;1: 'col-xs-12 col-md-2',<br />
-					&nbsp;2: 'col-xs-12 col-md-5',<br />
-					&nbsp;3: 'col-xs-12 col-md-3'<br />
-					}<br />
-				</code>
-			</div>
-			
-			<p>This is the result of our changes.</p>
-						
-			<div class="live-example marginTop-lg">
-				<div class="live-header col-xs-12">
-					Example#2 - Columns
-				</div>
-				<div id="live2" class="live-tiles col-xs-12">
-					<div class="tl-page" data-tl-template="myTemplate">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-			
-			<h2 class="marginTop-lg">Rows</h2>
-			
-			<p>Let's add four more tiles in the page and change our template as follows!</p>
-			
-			<div class="codeBlock">
-				<span class="codeHeader">Template object</span>
-				<code>
-					var myTemplateObject = {<br />
-					&nbsp;myTemplate: {<br />
-					&nbsp;&nbsp;tilesNum: 8,<br />
-					&nbsp;&nbsp;columns: {<br />
-					&nbsp;&nbsp;&nbsp;0: {<br />
-					&nbsp;&nbsp;&nbsp;&nbsp;colClass: 'tl-col col-xs-12 col-md-9',<br />
-					&nbsp;&nbsp;&nbsp;&nbsp;start: '0',<br />
-					&nbsp;&nbsp;&nbsp;&nbsp;end: '2'<br />
-					&nbsp;&nbsp;&nbsp;}<br />
-					&nbsp;&nbsp;},<br />
-					&nbsp;&nbsp;tiles: {<br />
-					&nbsp;&nbsp;&nbsp;0: 'col-xs-12 col-md-7',<br />
-					&nbsp;&nbsp;&nbsp;1: 'col-xs-12 col-md-2',<br />
-					&nbsp;&nbsp;&nbsp;2: 'col-xs-12 col-md-5',<br />
-					&nbsp;&nbsp;&nbsp;3: 'col-xs-12 col-md-3',<br />
-					&nbsp;&nbsp;&nbsp;4: 'col-xs-12 col-md-3',<br />
-					&nbsp;&nbsp;&nbsp;5: 'col-xs-12 col-md-3',<br />
-					&nbsp;&nbsp;&nbsp;6: 'col-xs-12 col-md-3',<br />
-					&nbsp;&nbsp;&nbsp;7: 'col-xs-12 col-md-3'<br />
-					&nbsp;&nbsp;}<br />
-					&nbsp;}<br />
-					}
-				</code>
-			</div>
-			
-			<div class="live-example marginTop-lg">
-				<div class="live-header col-xs-12">
-					Example#3.1 - Rows
-				</div>
-				<div id="live3" class="live-tiles col-xs-12">
-					<div class="tl-page" data-tl-template="myTemplate">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-			
-			<p>But we wanted all the new tiles to be places under the first four! Instead, the fifth tile goes under the fourth tile.</p>
-			<p>To overcome this obstacle we can place all the last four tiles inside a row. Let's create the <strong>rows</strong> object.</p>
-			
-			<div class="codeBlock">
-				<span class="codeHeader">Rows object</span>
-				<code>
-					rows: {<br />
-					&nbsp;0: {<br />
-					&nbsp;&nbsp;rowClass: 'tl-row col-xs-12',<br />
-					&nbsp;&nbsp;start: '4',<br />
-					&nbsp;&nbsp;end: '7'<br />
-					&nbsp;}<br />
-					}<br />
-				</code>
-			</div>
-			
-			<p>See how the last four tiles are aligned into a single row under the first four tiles.</p>
-			
-			<div class="live-example marginTop-lg">
-				<div class="live-header col-xs-12">
-					Example#3.2 - Rows
-				</div>
-				<div id="live4" class="live-tiles col-xs-12">
-					<div class="tl-page" data-tl-template="myTemplate">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-			
-			<h2 class="marginTop-lg">Animations</h2>
-			
-			<p>Now let's make our tiles more attractive by adding an animation on load. You can do this by creating an <strong>animations</strong> object.</p>
-			<p>The animations object is a set of objects that apply to each tile separately.</p>
-			<ul>
-				<li>tlClass [string]: The class that the specific tile will get.</li>
-				<li>tlClassF [string]: The class that the specific tile will get and trigger the css animation.</li>
-				<li>tlDelay [number]: The time in milliseconds that the animation will wait until it starts getting executed.</li>
-			</ul>
-			<p>At the moment, there are six animations ready to be used but more are coming! You can create your self your own animation type by adding a new set of css rules that will perform a different animation!</p>
-			<p>These are the available animation types:</p>
-			<ol>
-				<li>tl-scale</li>
-				<li>tl-fade</li>
-				<li>tl-slide-up</li>
-				<li>tl-slide-down</li>
-				<li>tl-slide-left</li>
-				<li>tl-slide-right</li>
-			</ol>
-			<div class="alert alert-info" role="alert">Click the buttons to initialize the plugin</div>
-			
-			<h3 class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-scale</h3>
-			
-			<div class="codeBlock">
-				<span class="codeHeader">Animations object (tl-scale)</span>
-				<code>
-					animations: {<br />
-					&nbsp;0: { tlClass:'tl-scale', tlClassF:'tl-scale-up', tlDelay:150 },<br />
-					&nbsp;<i>//...</i><br />
-					}<br />
-				</code>
-			</div>
-			
-			<div class="live-example marginTop-lg">
-				<div class="live-header col-xs-12">
-					Example#4.1 - Animations (tl-scale) <button id="load_live_5" type="button" class="btn btn-default load_live">Initialize plugin</button>
-				</div>
-				<div id="live5" class="live-tiles col-xs-12">
-					<div class="tl-page" data-tl-template="myTemplate">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-			
-			<h3 class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-fade</h3>
-						
-			<div class="codeBlock">
-				<span class="codeHeader">Animations object (tl-fade)</span>
-				<code>
-					animations: {<br />
-					&nbsp;0: { tlClass:'tl-fade', tlClassF:'tl-fade-in', tlDelay:150 },<br />
-					&nbsp;<i>//...</i><br />
-					}<br />
-				</code>
-			</div>
-			
-			<div class="live-example marginTop-lg">
-				<div class="live-header col-xs-12">
-					Example#4.2 - Animations (tl-fade) <button id="load_live_8" type="button" class="btn btn-default load_live">Initialize plugin</button>
-				</div>
-				<div id="live8" class="live-tiles col-xs-12">
-					<div class="tl-page" data-tl-template="myTemplate">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-			
-			<h3 class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-slide-up</h3>
-						
-			<div class="codeBlock">
-				<span class="codeHeader">Animations object (tl-slide-up)</span>
-				<code>
-					animations: {<br />
-					&nbsp;0: { tlClass:'tl-slide-up', tlClassF:'tl-slide-up-f', tlDelay:150 },<br />
-					&nbsp;<i>//...</i><br />
-					}<br />
-				</code>
-			</div>
-			
-			<div class="live-example marginTop-lg">
-				<div class="live-header col-xs-12">
-					Example#4.3 - Animations (tl-slide-up) <button id="load_live_9" type="button" class="btn btn-default load_live">Initialize plugin</button>
-				</div>
-				<div id="live9" class="live-tiles col-xs-12">
-					<div class="tl-page" data-tl-template="myTemplate">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-			
-			<h3 class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-slide-down</h3>
-						
-			<div class="codeBlock">
-				<span class="codeHeader">Animations object (tl-slide-down)</span>
-				<code>
-					animations: {<br />
-					&nbsp;0: { tlClass:'tl-slide-down', tlClassF:'tl-slide-down-f', tlDelay:150 },<br />
-					&nbsp;<i>//...</i><br />
-					}<br />
-				</code>
-			</div>
-			
-			<div class="live-example marginTop-lg">
-				<div class="live-header col-xs-12">
-					Example#4.4 - Animations (tl-slide-down) <button id="load_live_10" type="button" class="btn btn-default load_live">Initialize plugin</button>
-				</div>
-				<div id="live10" class="live-tiles col-xs-12">
-					<div class="tl-page" data-tl-template="myTemplate">
-						<div class="test"></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-			
-			<h3 class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-slide-left</h3>
-						
-			<div class="codeBlock">
-				<span class="codeHeader">Animations object (tl-slide-left)</span>
-				<code>
-					animations: {<br />
-					&nbsp;0: { tlClass:'tl-slide-left', tlClassF:'tl-slide-left-in', tlDelay:150 },<br />
-					&nbsp;<i>//...</i><br />
-					}<br />
-				</code>
-			</div>
-			
-			<div class="live-example marginTop-lg">
-				<div class="live-header col-xs-12">
-					Example#4.5 - Animations (tl-slide-left) <button id="load_live_11" type="button" class="btn btn-default load_live">Initialize plugin</button>
-				</div>
-				<div id="live11" class="live-tiles col-xs-12">
-					<div class="tl-page" data-tl-template="myTemplate">
-						<div class="test"></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-			
-			<h3 class="animation-header"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> tl-slide-right</h3>
-						
-			<div class="codeBlock">
-				<span class="codeHeader">Animations object (tl-slide-right)</span>
-				<code>
-					animations: {<br />
-					&nbsp;0: { tlClass:'tl-slide-right', tlClassF:'tl-slide-right-in', tlDelay:150 },<br />
-					&nbsp;<i>//...</i><br />
-					}<br />
-				</code>
-			</div>
-			
-			<div class="live-example marginTop-lg">
-				<div class="live-header col-xs-12">
-					Example#4.6 - Animations (tl-slide-right) <button id="load_live_12" type="button" class="btn btn-default load_live">Initialize plugin</button>
-				</div>
-				<div id="live12" class="live-tiles col-xs-12">
-					<div class="tl-page" data-tl-template="myTemplate">
-						<div class="test"></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-			
-			<p>Feel free to mix up those animation into the same template object to achieve your custom animation!</p>
-			
-			<h2 class="marginTop-lg">Configuration</h2>
-			
-			<p>We've seen in options section that we can set another padding or ratio for the tiles by just passing the right values to the appropriate options (tilePadding - tileRatio).</p>
-			<p>These options get applied to all tiles. But, what if you would like to set specific padding or/and ratio for a specific tile?</p>
-			<p><strong>config</strong> object is what you need!</p>
-			<p>Let's add a config object to our custom template in order to give a specific padding and ratio to the first tile.</p>
-			
-			<div class="codeBlock">
-				<span class="codeHeader">Config object</span>
-				<code>
-					config: {<br />
-					&nbsp;0: {<br />
-					&nbsp;&nbsp;<i>//Set the padding with a valid string</i><br />
-					&nbsp;&nbsp;padding: '30px',<br />
-					&nbsp;&nbsp;<i>//Set the ration with a positive number</i><br />
-					&nbsp;&nbsp;ratio: 1,<br />
-					&nbsp;}<br />
-					}<br />
-				</code>
-			</div>
-			
-			<p>Check the followng example. The first tile has a padding of 30px and it's height/width ratio is equal to 1 (a perfect square!).</p>
-			
-			<div class="live-example marginTop-lg">
-				<div class="live-header col-xs-12">
-					Example#5 - Configuration
-				</div>
-				<div id="live6" class="live-tiles col-xs-12">
-					<div class="tl-page" data-tl-template="myTemplate">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-		
-		<div class="col-xs-12 marginTop-md">
-			<h1 id="paging" class="section-header">Paging</h1>
-			<p>In many occasions you might want to split your tiles in pages and implement a smooth navigation.</p>
-			<p>jsTiles gives you the ability to implement this feature simply by wrapping the desired tiles into a page section and apply an appropriate template for each page.</p>
-			<p>Let's add another page to our previous example and set our custom template and the default 'tempA' template to the first and second page respectively.</p>
-			
-			<div class="codeBlock">
-				<span class="codeHeader">HTML</span>
-				<code>
-					&lt;div id="tiles-container"&gt;<br />
-						&nbsp;&lt;div class="tl-page" data-tl-template="myTemplate"&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-						&nbsp;&lt;/div&gt;<br />
-						&nbsp;&lt;div class="tl-page" data-tl-template="tempA"&gt;<br />
-							&nbsp;&nbsp;&nbsp;<i>&lt;!-- tempA needs 10 tiles to work, so we add a page with 10 divs --&gt;</i><br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-							&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br />
-						&nbsp;&lt;/div&gt;<br />
-					&lt;/div&gt;<br />
-				</code>
-			</div>
-			
-			<p>Now just initialize the plugin just like you have done it so far. jsTiles will recognize that there are more than one pages and will implement the paging feature automatically.</p>
-			
-			<div class="live-example marginTop-lg">
-				<div class="live-header col-xs-12">
-					Example#6 - Paging
-				</div>
-				<div id="live7" class="live-tiles col-xs-12">
-					<div class="tl-page" data-tl-template="myTemplate">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-					<div class="tl-page" data-tl-template="tempA">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-			
-			<p class="marginTop-lg">Now you are ready to experiment and create beautiful tiles taking advantage of the many options that are available form Bootstrap!</p>
-			
+		<div id="side-nav-affix" class="hidden-xs hidden-sm col-md-3">
+			<nav class="nav" data-spy="affix" data-offset-top="850">
+				<ul class="ul-0">
+					<li><a href="#initialization">Initialization</a></li>
+					<li><a href="#options">Options</a></li>
+					<li><a href="#methods">Methods</a></li>
+					<li><a href="#templates">Templates</a>
+						<ul class="nav ul-1">
+							<li><a href="#columns">Columns</a></li>
+							<li><a href="#rows">Rows</a></li>
+							<li><a href="#rows">Animations</a>
+								<ul class="nav ul-2">
+									<li><a href="#tl-scale">tl-scale</a></li>
+									<li><a href="#tl-fade">tl-fade</a></li>
+									<li><a href="#tl-slide-up">tl-slide-up</a></li>
+									<li><a href="#tl-slide-down">tl-slide-down</a></li>
+									<li><a href="#tl-slide-left">tl-slide-left</a></li>
+									<li><a href="#tl-slide-right">tl-slide-right</a></li>
+								</ul>
+							</li>
+							<li><a href="#configuration">Configuration</a>
+						</ul>
+					</li>
+					<li><a href="#paging">Paging</a></li>
+					<li><a id="goTopLi" href="#"><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> Top</a></li>
+				</ul>
+			</nav>
 		</div>
 		
 	</div>
@@ -920,6 +953,7 @@
 	</footer>
 	
 	<script src="scripts/jquery-1.11.2.min.js"></script>
+	<script src="resources/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 	<script src="scripts/jstiles/jstiles.js"></script>
 	<script src="scripts/jquery.easing.1.3.js"></script>
 	<script src="scripts/scripts.js"></script>

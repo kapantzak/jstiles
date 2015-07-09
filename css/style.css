@@ -315,6 +315,46 @@ code.code-scroll {
 	color:#fff;
 }
 
+/* Affix nav */
+#side-nav-affix nav {
+	padding-top:30px;	
+}
+#side-nav-affix nav.affix {
+	width:200px;
+	top:0;
+}
+#side-nav-affix ul {
+	margin:0;
+	padding:0;
+}
+#side-nav-affix li {
+	width:100%;
+	display:block;
+	float:left;
+	padding-left:15px;
+	list-style:none;	
+}
+#side-nav-affix a {
+	display:block;
+	padding:5px 10px;
+}
+#side-nav-affix a {
+	text-decoration:none;
+	font-size:18px;
+}
+#side-nav-affix li.active > a {
+	font-weight:bold;	
+}
+.side-nav-level-0 li.active a {
+	color:#fff;
+}
+.ul-1,
+.ul-2 {
+	display:none;
+}
+.ul-0 li.active .ul-1,
+.ul-1 li.active .ul-2 { display:block }
+
 /* Go to top */
 #goTop {
 	padding:10px 15px;
