@@ -442,7 +442,7 @@ $(document).on('click', '.innerAnchor', function(e) {
 	$('html, body').animate({scrollTop: scroll + 'px'}, 450, 'easeInOutExpo');
 });
 
-$('#goTop').on('click', function() {
+$('#goTop, #goTopLi').on('click', function() {
 	$('body,html').animate({scrollTop:0},350,'easeOutExpo');	
 });
 
