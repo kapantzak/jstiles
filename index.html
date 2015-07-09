@@ -212,7 +212,7 @@
 					
 					<!-- loader -->
 					<div class="col-xs-12">
-						<h2>loader [number]</h2>
+						<h2 id="loader">loader [number]</h2>
 						<p>Provide a number (greater that zero) that indicates the duration (in milliseconds) of the loader appearance, if you want to display the loader before the tiles load.</p>
 						<p>If you want to display the tiles immediately on load, set this option to zero.</p>
 						<div class="well well-lg">
@@ -225,7 +225,7 @@
 					
 					<!-- loaderHtml -->
 					<div class="col-xs-12">
-						<h2>loaderHtml [string]</h2>
+						<h2 id="loaderHtml">loaderHtml [string]</h2>
 						<p>If you want to display a custom loader you can set it right here! Just pass your loader HTML markup through loaderHtml option as shown in the example below.</p>					
 						<div class="codeBlock">
 							<span class="codeHeader">Custom loader</span>
@@ -247,7 +247,7 @@
 					
 					<!-- templateObj -->
 					<div class="col-xs-12">
-						<h2>templateObj [object]</h2>
+						<h2 id="templateObj">templateObj [object]</h2>
 						<p>With this option you can tell the plugin to include your custom templates too, so that you can apply them to any page you want!</p>	
 						<p>Check the <a class="innerAnchor" href="#templates">TEMPLATES TUTORIAL</a> to learn how you can create your custom template.</p>
 						<div class="codeBlock">
@@ -272,7 +272,7 @@
 					
 					<!-- pageHome -->
 					<div class="col-xs-12">
-						<h2>pageHome [number]</h2>
+						<h2 id="pageHome">pageHome [number]</h2>
 						<p>Set the page that is going to be visible on load by providing a zero based index. For example, if you want the second page to be visible on load, you must set this option equal to 1.</p>
 						<p><span class="label label-warning">Note</span> This option will take no effect if you have only one page to display. Also, you must provide a number that is not greater than the pages number minus one (eg if you have 3 pages, you can set this option up to the value of 2).</p>
 						<div class="well well-lg">
@@ -285,7 +285,7 @@
 					
 					<!-- tilePadding -->
 					<div class="col-xs-12">
-						<h2>tilePadding [string]</h2>
+						<h2 id="tilePadding">tilePadding [string]</h2>
 						<p>Set the padding of the tiles. By default, this option is set to false, so that the tiles can take the default padding (5px) from the css file.</p>
 						<p><span class="label label-warning">Note</span> This option applies the same padding to all tiles. However, you can provide specific padding value to a specific tile through the <a class="innerAnchor" href="#templates">template object</a>.</p>
 						<div class="well well-lg">
@@ -298,7 +298,7 @@
 					
 					<!-- tileRatio -->
 					<div class="col-xs-12">
-						<h2>tileRatio [number]</h2>
+						<h2 id="tileRatio">tileRatio [number]</h2>
 						<p>Set the height to width ratio of the tiles. By default, this option is set to false, so that the tiles can take the default ratio (0.57) from the css file.</p>
 						<p><span class="label label-warning">Note</span> This option applies the same ratio to all tiles. However, you can provide specific ratio value to a specific tile through the <a class="innerAnchor" href="#templates">template object</a>.</p>
 						<div class="well well-lg">
@@ -311,7 +311,7 @@
 					
 					<!-- sliderEasing -->
 					<div class="col-xs-12">
-						<h2>sliderEasing [string]</h2>
+						<h2 id="sliderEasing">sliderEasing [string]</h2>
 						<p>Set the easing function for the sliding animation of the pages.</p>
 						<div class="well well-lg">
 							<ul>
@@ -323,7 +323,7 @@
 					
 					<!-- slideDuration -->
 					<div class="col-xs-12">
-						<h2>slideDuration [number]</h2>
+						<h2 id="slideDuration">slideDuration [number]</h2>
 						<p>Set the duration of the pages sliding animation in milliseconds.</p>
 						<div class="well well-lg">
 							<ul>
@@ -919,7 +919,18 @@
 			<nav class="nav" data-spy="affix" data-offset-top="850">
 				<ul class="ul-0">
 					<li><a href="#initialization">Initialization</a></li>
-					<li><a href="#options">Options</a></li>
+					<li><a href="#options">Options</a>
+						<ul class="nav ul-1">
+							<li><a href="#loader">loader</a></li>
+							<li><a href="#loaderHtml">loaderHtml</a></li>
+							<li><a href="#templateObj">templateObj</a></li>
+							<li><a href="#pageHome">pageHome</a></li>
+							<li><a href="#tilePadding">tilePadding</a></li>
+							<li><a href="#tileRatio">tileRatio</a></li>
+							<li><a href="#sliderEasing">sliderEasing</a></li>
+							<li><a href="#slideDuration">slideDuration</a></li>
+						</ul>
+					</li>
 					<li><a href="#methods">Methods</a></li>
 					<li><a href="#templates">Templates</a>
 						<ul class="nav ul-1">
