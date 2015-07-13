@@ -158,7 +158,7 @@ $(document).ready(function() {
 		}
 	};
 	var opt6 = {
-		templateObj: temp6
+		templateObj: temp4
 	};
 	$('#live6').jstiles(opt6);
 	$('#live7').jstiles(opt6);
