@@ -114,7 +114,7 @@
 			});
 			
 			//Trigger event
-			$(document).trigger('tl.tilecontent.appended', [selector]);
+			$(document).trigger('tl.tilecontent.appended', [$el]);
 			
 			//Set the templates
 			pages.each(function(index) {
@@ -195,7 +195,7 @@
 			});
 			
 			//Trigger event
-			$(document).trigger('tl.template.built', [selector]);
+			$(document).trigger('tl.template.built', [$el]);
 			
 			//Page slider --------------------------------------------------------------------------- //
 			$(document).on('click', '.tl-arrow-holder', function() {
