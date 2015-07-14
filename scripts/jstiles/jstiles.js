@@ -104,7 +104,7 @@
 				var that = $(this);
 				var html = that.html();
 				var inner = '<div class="tl-tile-inner"><div class="tl-tile-content">' + html + '</div></div>';
-				that.html(inner);
+				that.html(inner);				
 				if (tilePadding != false) {
 					that.css({'padding': tilePadding});						
 				}
@@ -112,6 +112,9 @@
 					that.find('.tl-tile-inner').css({'padding-top': parseFloat(tileRatio) * 100 + '%'});
 				}
 			});
+			
+			//Trigger event
+			$(document).trigger('tl.tilecontent.appended', [selector]);
 			
 			//Set the templates
 			pages.each(function(index) {
@@ -190,6 +193,9 @@
 					console.log("Template's tiles number doesn't match actual tiles number");
 				}		
 			});
+			
+			//Trigger event
+			$(document).trigger('tl.template.built', [selector]);
 			
 			//Page slider --------------------------------------------------------------------------- //
 			$(document).on('click', '.tl-arrow-holder', function() {
