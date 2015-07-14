@@ -52,14 +52,17 @@
 					<span class="content-hidden">
 						<p>Choose one or more from the available templates or create a custom one!</p>
 						<p>
-							<a class="githubAnchor innerAnchor floatLeft" href="#templates" target="_blank" title="Learn how to create templates"><span class="linkText">Templates</span></a>
+							<a class="githubAnchor innerAnchor floatLeft" href="#templates" title="Learn how to create templates"><span class="linkText">Templates</span></a>
 						</p>
 					</span>
 				</div>
 				<div id="tileE">
-					<h2>Bootstrap</h2>
+					<h2>Events</h2>
 					<span class="content-hidden content-hidden-small">
-						<p>Use any of the available classes of Bootstrap grip system to style your tiles!</p>
+						<p>Listen to custom events!</p>
+						<p>
+							<a class="githubAnchor innerAnchor floatLeft" href="#events"><span class="linkText">Events</span></a>
+						</p>
 					</span>
 				</div>
 				<div id="tileF"></div>
@@ -909,8 +912,50 @@
 					</div>
 				</div>
 				
-				<p class="marginTop-lg">Now you are ready to experiment and create beautiful tiles taking advantage of the many options that are available form Bootstrap!</p>
+			</div>
+			
+			<div class="col-xs-12 marginTop-md">
+				<h1 id="events" class="section-header">Events</h1>
 				
+				<div class="row">
+					<div class="col-xs-12">
+						<p><strong>jsTiles</strong> triggers various events on different parts of the plugin's execution life cycle.</p>
+						<p>Every event returns the selector on which the plugin has been initialized, so that you can distinguish the element that each event refers to.</p>
+						<p>Here's how you can call a function on an event execution:</p>
+						<div class="codeBlock">
+							<span class="codeHeader">Event</span>
+							<code>
+								<i>//Replace event.name with the actual event's name</i><br />
+								$(document).on('event.name', function(e, data) {<br />
+								&nbsp;if (data == '#selector') {<br />
+								&nbsp;&nbsp;<i>//Do your stuff...</i><br />
+								&nbsp;}<br />
+								});
+							</code>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<!-- tl.tilecontent.appended -->
+					<div class="col-xs-12">
+						<h2>tl.tilecontent.appended</h2>
+						<p>This event is triggered as soon as the inner content of all tiles has been appended.</p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<!-- tl.template.built -->
+					<div class="col-xs-12">
+						<h2>tl.template.built</h2>
+						<p>This event is triggered as soon as the templates have been built.</p>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="col-xs-12 marginTop-lg">
+				<p>Now you are ready to experiment and create beautiful tiles taking advantage of the many options that are available form Bootstrap!</p>
 			</div>
 			
 		</div>
@@ -950,6 +995,7 @@
 						</ul>
 					</li>
 					<li><a href="#paging">Paging</a></li>
+					<li><a href="#events">Events</a></li>
 					<li><a id="goTopLi" href="#"><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> Top</a></li>
 				</ul>
 			</nav>
@@ -968,5 +1014,13 @@
 	<script src="scripts/jstiles/jstiles.js"></script>
 	<script src="scripts/jquery.easing.1.3.js"></script>
 	<script src="scripts/scripts.js"></script>
+	<script>
+		$(document).on('tl.tilecontent.appended', function(e, data) {
+			console.log('Tiles appended on: ' + data);
+		});
+		$(document).on('tl.template.built', function(e, data) {
+			console.log('Templates built on: ' + data);
+		});
+	</script>
 </body>
 </html>
